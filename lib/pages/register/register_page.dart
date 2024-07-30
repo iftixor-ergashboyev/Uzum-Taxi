@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:uzum_taxi/pages/register/register_2_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -90,7 +91,11 @@ class _RegisterPageState extends State<RegisterPage> {
               elevation: 10,
               shadowColor: CupertinoColors.systemPurple.withOpacity(0.2)
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context,
+                CupertinoPageRoute(builder: (context) => Register2Page())
+            );
+          },
           child: Text("Davom etish", style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.bold, color: CupertinoColors.white)),
         ),
       ),
